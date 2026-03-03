@@ -6,7 +6,7 @@ function HomePage() {
 
 
   return (
-    <div id="home-page" role="content" aria-label="home page" className={`home-wrapper-main relative bg-amber-500 min-h-screen`}>
+    <div id="home-page" aria-label="home page" className={`home-wrapper-main relative bg-amber-500 min-h-screen`}>
       <Navbar/>
       <video 
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Hamburger from '../common/hamburger';
 import { useEffect, useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
 import { useNavigate } from "react-router";
 import { movieGenres, seriesGenres } from '../../constants/navigationData';
@@ -159,7 +159,7 @@ function MobileNav() {
                     }
                     return null;
                   })}
-                  <li><footer className="mt-4">
+                  <li><footer className="mt-4 ">
                     <p className="text-sm text-gray-400">
                       &#169; {date} {appName}. All rights reserved.
                     </p>
@@ -169,8 +169,15 @@ function MobileNav() {
             </div>
             <div aria-hidden={!dropDownSM} className={`slide-wrapper-nav-child flex flex-col absolute inset-0 backdrop-blur-[40px] z-50 bg-black/70 h-full w-2/3 transform transition-transform duration-300 ease-in-out ${dropDownSM ? 'translate-x-0' : '-translate-x-full'}`}>
                   
-                    <div className='btn-back block w-full p-4 bg-amber-400/40'>
-                      <button>Main Menu</button>
+                    <div className='btn-back block px-2 w-full'>
+                      <div className='m-2 my-4'>
+                        <button type='button' aria-label='close' onClick={()=>{setDropDownSm(!dropDownSM)}} className='btn-back-text  bg-amber-400/40! w-full p-2 text-start bg-amber400/10! rounded-xl'><FontAwesomeIcon
+                            className="text-xl text-amber-400/80"
+                            icon={faCaretLeft}
+                            
+                          /><span className='nav-text'>Main Menu</span>
+                          </button>
+                      </div>
                     </div>
                   <div className="subnav-container h-full relative">
                     <ul id='ul-sm-child-btn-component' className='nav-links overflow-y-scroll absolute! inset-0 flex flex-col gap-[1rem] mx-2 !'>
