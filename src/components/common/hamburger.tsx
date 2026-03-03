@@ -11,9 +11,9 @@ type HamburgerProps = {
 
 const Hamburger = ({isChecked,ariaExpanded,ariaControls,onClick}:HamburgerProps) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper className=''>
       <label className="burger" htmlFor="burger">
-        <input type="checkbox" aria-expanded={ariaExpanded} aria-controls={ariaControls} checked={isChecked} onChange={onClick} id="burger" />
+        <input type="checkbox" aria-label='toggle menu' aria-expanded={ariaExpanded} aria-controls={ariaControls} checked={isChecked} onChange={onClick} id="burger" />
         <span />
         <span />
         <span />
@@ -23,11 +23,11 @@ const Hamburger = ({isChecked,ariaExpanded,ariaControls,onClick}:HamburgerProps)
 }
 
 const StyledWrapper = styled.div`
+
   .burger {
     position: relative;
     width: 40px;
-    height: 25px;
-    margin-right: 10px;
+    height: 25px;   
     background: transparent;
     cursor: pointer;
     display: block;
@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     height: 4px;
     width: 100%;
-    background-color: #f5a700;
+    background-color: orange;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -83,6 +83,12 @@ const StyledWrapper = styled.div`
     top: 28px;
     left: 5px;
   }
+
+  .burger:focus-within {
+  outline: 2px solid #f59e0b;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 `;
 
 export default Hamburger;

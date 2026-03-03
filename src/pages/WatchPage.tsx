@@ -1,8 +1,10 @@
-import React from 'react'
 
+import Navbar from '../components/navigation/navbar';
 function WatchPage() {
   return (
-    <div>WatchPage</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
 

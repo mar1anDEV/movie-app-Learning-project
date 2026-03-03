@@ -1,14 +1,16 @@
+import Navbar from '../components/navigation/navbar';
 
-import { useLocation } from 'react-router'
+
 function MoviesCategory() {
 
-    const location = useLocation().pathname
-    .replaceAll('/',' ')
+  
+  return (
+    <div className='min-h-screen bg-blue-600 relative'>
+
     
 
-
-  return (
-    <div className='min-h-screen bg-blue-600'>{`Movies location = ${location}`}</div>
+      <Navbar/>
+    </div>
   )
 }
 

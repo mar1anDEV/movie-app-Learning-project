@@ -1,60 +1,63 @@
-
-
-
-type LinkItem= {
+type LinkItem = {
     name: string,
-    path: string
+    path: string,
+    id?: number 
 }
 
+type LinkItemMain = {
+    name: string,
+    path: string,
+    ref: string
+}
 
- export const movieGenres: LinkItem[] = [
-    { name: 'All Movies', path: '/movies/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Action', path: '/movies/action/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Adventure', path: '/movies/adventure/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Animation', path: '/movies/animation/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Comedy', path: '/movies/comedy/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Crime', path: '/movies/crime/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Documentary', path: '/movies/documentary/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Drama', path: '/movies/drama/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Family', path: '/movies/family/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Fantasy', path: '/movies/fantasy/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'History', path: '/movies/history/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Horror', path: '/movies/horror/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Music', path: '/movies/music/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Mystery', path: '/movies/mystery/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Romance', path: '/movies/romance/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Science Fiction', path:'/movies/science-fiction/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'TV Movie', path: '/movies/tv-movie/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Thriller', path: '/movies/thriller/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'War', path: '/movies/war/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Western', path: '/movies/western/page_number=:pageNumber/page_size=:pageSize' }
+export const movieGenres: LinkItem[] = [
+  { name: 'All Movies', path: '/movies' },
+  { id: 28, name: 'Action', path: '/movies/action' },
+  { id: 12, name: 'Adventure', path: '/movies/adventure' },
+  { id: 16, name: 'Animation', path: '/movies/animation' },
+  { id: 35, name: 'Comedy', path: '/movies/comedy' },
+  { id: 80, name: 'Crime', path: '/movies/crime' },
+  { id: 99, name: 'Documentary', path: '/movies/documentary' },
+  { id: 18, name: 'Drama', path: '/movies/drama' },
+  { id: 10751, name: 'Family', path: '/movies/family' },
+  { id: 14, name: 'Fantasy', path: '/movies/fantasy' },
+  { id: 36, name: 'History', path: '/movies/history' },
+  { id: 27, name: 'Horror', path: '/movies/horror' },
+  { id: 10402, name: 'Music', path: '/movies/music' },
+  { id: 9648, name: 'Mystery', path: '/movies/mystery' },
+  { id: 10749, name: 'Romance', path: '/movies/romance' },
+  { id: 878, name: 'Science Fiction', path: '/movies/science-fiction' },
+  { id: 10770, name: 'TV Movie', path: '/movies/tv-movie' },
+  { id: 53, name: 'Thriller', path: '/movies/thriller' },
+  { id: 10752, name: 'War', path: '/movies/war' },
+  { id: 37, name: 'Western', path: '/movies/western' }
 ];
 
-   export const seriesGenres : LinkItem[] = [
-    { name: 'All TV-Shows', path: '/all-tv-shows/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Action & Adventure', path: '/tv-shows/action-adventure/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Animation', path: '/tv-shows/animation/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Comedy', path: '/tv-shows/comedy/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Crime', path: '/tv-shows/crime/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Documentary', path: '/tv-shows/documentary/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Drama', path: '/tv-shows/drama/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Family', path: '/tv-shows/family/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Kids', path: '/tv-shows/kids/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Mystery', path: '/tv-shows/mystery/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'News', path: '/tv-shows/news/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Reality', path: '/tv-shows/reality/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Sci-Fi & Fantasy', path: '/tv-shows/sci-fi-fantasy/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Soap', path: '/tv-shows/soap/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Talk', path: '/tv-shows/talk/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'War & Politics', path: '/tv-shows/war-politics/page_number=:pageNumber/page_size=:pageSize' },
-    { name: 'Western', path: '/tv-shows/western/page_number=:pageNumber/page_size=:pageSize' }
-]
+export const seriesGenres: LinkItem[] = [
+  { name: 'All TV-Shows', path: '/tv-shows' },
+  { id: 10759, name: 'Action & Adventure', path: '/tv-shows/action-adventure' },
+  { id: 16, name: 'Animation', path: '/tv-shows/animation' },
+  { id: 35, name: 'Comedy', path: '/tv-shows/comedy' },
+  { id: 80, name: 'Crime', path: '/tv-shows/crime' },
+  { id: 99, name: 'Documentary', path: '/tv-shows/documentary' },
+  { id: 18, name: 'Drama', path: '/tv-shows/drama' },
+  { id: 10751, name: 'Family', path: '/tv-shows/family' },
+  { id: 10762, name: 'Kids', path: '/tv-shows/kids' },
+  { id: 9648, name: 'Mystery', path: '/tv-shows/mystery' },
+  { id: 10763, name: 'News', path: '/tv-shows/news' },
+  { id: 10764, name: 'Reality', path: '/tv-shows/reality' },
+  { id: 10765, name: 'Sci-Fi & Fantasy', path: '/tv-shows/sci-fi-fantasy' },
+  { id: 10766, name: 'Soap', path: '/tv-shows/soap' },
+  { id: 10767, name: 'Talk', path: '/tv-shows/talk' },
+  { id: 10768, name: 'War & Politics', path: '/tv-shows/war-politics' },
+  { id: 37, name: 'Western', path: '/tv-shows/western' }
+];
 
-    export const menuLinks: LinkItem[] = [
-        { name: 'Home', path: '/' },
-        { name: 'Trending Now', path: 'movies/trending/' },
-        { name: 'Top Rated', path: 'movies/top-rated/' },
-        { name: 'Popular', path: 'movies/popular/' },
-        { name: 'Movies', path: 'movies/' },
-        { name: 'TV-Show', path: 'series/' }
-    ];
+export const menuLinks: LinkItemMain[] = [
+  { name: 'Home', path: '/',ref:''},
+  { name: 'Popular', path: '/movies/popular',ref:''},
+  { name: 'Trending', path: '/movies/trending',ref:''},
+  { name: 'Top-Rated', path: '/movies/top-rated',ref:''},
+  { name: 'Movies', path: '/movies',ref:'mn-mov-01'},
+  { name: 'Series', path: '/tv-shows',ref:'mn-tv-01'}
+];

@@ -1,9 +1,3 @@
-import React from 'react'
+import { createContext } from 'react';
 
-function AppContext() {
-  return (
-    <div>AppContext</div>
-  )
-}
-
-export default AppContext
+export const AppContext = createContext("Logo");
