@@ -23,11 +23,11 @@ function HeroSection() {
           raterProvider={contentData.raterProviderImage}
           movieDuration={contentData.duration}
           movieDescription={contentData.description}
-          movieStaring={contentData.starring.map((e: any) => e.name).join(', ')}
+          movieStaring={contentData.starring.map((e) => e.name).join(', ')}
           movieGenre={contentData.genres.join(', ')}
-          movieWriters={contentData.writers.map((e: any) => e.name).join(', ')}
+          movieWriters={contentData.writers.map((e) => e.name).join(', ')}
           movieDirector={contentData.directors
-            .map((e: any) => e.name)
+            .map((e) => e.name)
             .join(', ')}
           movieRating={contentData.rating}
           contentSRC={contentData.moviePosterSm}
@@ -39,9 +39,9 @@ function HeroSection() {
           raterProvider={contentData.raterProviderImage}
           movieDuration={contentData.duration}
           movieDescription={contentData.description}
-          movieStaring={contentData.starring.map((e: any) => e.name).join(', ')}
+          movieStaring={contentData.starring.map((e) => e.name).join(', ')}
           movieGenre={contentData.genres.join(', ')}
-          movieWriters={contentData.writers.map((e: any) => e.name).join(', ')}
+          movieWriters={contentData.writers.map((e) => e.name).join(', ')}
           movieDirector={contentData.directors
             .map((e: any) => e.name)
             .join(', ')}

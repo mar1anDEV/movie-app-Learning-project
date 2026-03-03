@@ -22,18 +22,14 @@ function App() {
 
           {/* Movies Category Routes */}
           <Route path='/movies' element={<MoviesPage/>}/>
-          <Route path='/movies/trending' element={<MoviesPage/>}/>
-          <Route path='/movies/top-rated' element={<MoviesPage/>}/>
-          <Route path='/movies/popular' element={<MoviesPage/>}/>
-
           {/* Movies Genre Routes - Dynamic */}
-          <Route path='/movies/:genre' element={<MoviesPage/>} />
+          <Route path='/movies/:params' element={<MoviesPage/>}/>
 
           {/* TV Shows Main Route */}
           <Route path='/tv-shows' element={<SeriesPage/>} />
 
           {/* TV Shows Genre Routes - Dynamic */}
-          <Route path='/tv-shows/:genre' element={<SeriesPage/>} />
+          <Route path='/tv-shows/:params' element={<SeriesPage/>} />
         </Routes>
       </Suspense>
     </BrowserRouter>
