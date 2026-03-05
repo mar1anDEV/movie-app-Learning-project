@@ -10,7 +10,7 @@ function DesktopNavbar() {
   return (
     <header className="header-navbar-holder hidden md:block absolute left-0 right-0 backdrop-blur-[40px] z-50 w-full transition-all duration-300">
       <div className="wrapper">
-        <div className="nav-container relative bg-black/80 py-6 w-full transition-all duration-300">
+        <div className="nav-container relative bg-black/50 py-2 xl:py-6 w-full transition-all duration-300">
           <nav className="w-[calc(100%-2rem)] xl:w-[calc(100%-12rem)] hidden sm:flex justify-between mx-auto transition-all duration-300">
             <div className="navbar-brand w-fit">
               <Link to="/" className="cursor-pointer" aria-label="logo">
@@ -23,7 +23,7 @@ function DesktopNavbar() {
                   return (
                     <li
                       key={link.path}
-                      className="nav-link nav-text-1 group mx-4 relative inline-block cursor-pointer"
+                      className="nav-link text-xs lg:text-md xl:text-[16px] nav-text-1 group mx-4 relative inline-block cursor-pointer"
                     >
                       <Link to={link.path}>
                         <span className="nav-text group-hover:!text-amber-500">

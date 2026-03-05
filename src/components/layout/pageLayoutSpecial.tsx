@@ -10,7 +10,7 @@ function PageLayoutSpecial({classSpecial,children}:PageProps) {
     <section className={`${classSpecial} min-h-screen relative`}>
         <div className="absolute inset-0 flex flex-col">
           <div className="h-[96px]"></div>
-          <div className="grow p-4">
+          <div className="grow">
             {children}
           </div>
         </div>

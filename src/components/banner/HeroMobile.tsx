@@ -1,98 +1,47 @@
+import PageLayoutSpecial from "../layout/pageLayoutSpecial";
+
 interface HeroMobileProps {
-  movieTitle: string;
-  movieUnderTitle: string;
-  raterProvider: string;
-  movieDuration: number;
-  movieDescription: string;
-  movieStaring: string;
-  movieGenre: string;
-  movieWriters: string;
-  movieDirector: string;
-  movieRating?: number;
-  contentSRC: string;
+  contentTitle?: string;
+  contentUnderTitle?: string;
+  contentRaterProvider?: string;
+  contentDuration?: number;
+  contentDescription?: string;
+  contentStaring?: string;
+  contentGenre?: string;
+  contentWriters?: string;
+  contentDirector?: string;
+  contentRating?: number;
+  contentSRC?: string;
 }
 
 function HeroMobile({
-  movieTitle,
-  movieUnderTitle,
-  raterProvider,
-  movieDuration,
-  movieDescription,
-  movieStaring,
-  movieGenre,
-  movieWriters,
-  movieDirector,
-  movieRating,
+  contentTitle,
+  contentUnderTitle,
+  contentRaterProvider,
+  contentDuration,
+  contentDescription,
+  contentStaring,
+  contentGenre,
+  contentWriters,
+  contentDirector,
+  contentRating,
   contentSRC,
 }: HeroMobileProps) {
   return (
-    <div className="bg-cyan-950 min-h-dvh p-4 text-white">
-      <p>movieTitle: {movieTitle}</p>
-      <p>movieUnderTitle: {movieUnderTitle}</p>
-      <p>raterProvider: {raterProvider}</p>
-      <p>movieDuration: {movieDuration}</p>
-      <p>movieDescription: {movieDescription}</p>
-      <p>movieStaring: {movieStaring}</p>
-      <p>movieGenre: {movieGenre}</p>
-      <p>movieWriters: {movieWriters}</p>
-      <p>movieDirector: {movieDirector}</p>
-      <p>movieRating: {movieRating}</p>
-      <p>src: {contentSRC}</p>
-    </div>
+    <PageLayoutSpecial classSpecial="bg-amber-400">
+      <p>contentTitle: {contentTitle}</p>
+      <p>contentUnderTitle: {contentUnderTitle}</p>
+      <p>contentRaterProvider: {contentRaterProvider}</p>
+      <p>contentDuration: {contentDuration}</p>
+      <p>contentDescription: {contentDescription}</p>
+      <p>contentStaring: {contentStaring}</p>
+      <p>contentGenre: {contentGenre}</p>
+      <p>contentWriters: {contentWriters}</p>
+      <p>contentDirector: {contentDirector}</p>
+      <p>contentRating: {contentRating}</p>
+      <p>contentSRC: {contentSRC}</p>
+    </PageLayoutSpecial>
   );
 }
 
 export default HeroMobile;
-
-// ============================================================================
-// INACTIVE FILE - NOT IN USE
-// ============================================================================
-// This component is not currently being used in the application
-// Keeping for reference or potential future use
-// ============================================================================
-
-//interface HeroDesktopProps {
-  //movieTitle: string;
-  //movieUnderTitle: string;
-  //raterProvider: string;
-  //movieDuration: number;
-  //movieDescription: string;
-  //movieStaring: string;
-  //movieGenre: string;
-  //movieWriters: string;
-  //movieDirector: string;
-  //movieRating?: number;
-  //contentSRC: string
-//}
-
-//function HeroMobile({
-  //movieTitle,
-  //movieUnderTitle,
-  //raterProvider,
-  //movieDuration,
-  //movieDescription,
-  //movieStaring,
-  //movieGenre,
-  //movieWriters,
-  //movieDirector,
-  //movieRating,
-  //contentSRC
-//}: HeroDesktopProps) {
-  //return (
-    //<div className='bg-cyan-950 min-h-dvh p-4 text-white'>
-      //<p>movieTitle: {movieTitle}</p>
-      //<p>movieUnderTitle: {movieUnderTitle}</p>
-      //<p>raterProvider: {raterProvider}</p>
-      //<p>movieDuration: {movieDuration}</p>
-      //<p>movieDescription: {movieDescription}</p>
-      //<p>movieStaring: {movieStaring}</p>
-      //<p>movieGenre: {movieGenre}</p>
-      //<p>movieWriters: {movieWriters}</p>
-      //<p>movieDirector: {movieDirector}</p>
-      //<p>movieRating: {movieRating}</p>
-      //<p>src: {contentSRC}</p>
-    //</div>
-  //)
-//}
-
-//export default HeroMobile;
